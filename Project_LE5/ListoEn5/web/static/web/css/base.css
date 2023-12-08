@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Exo 2', sans-serif;
+}
+
+:root {
+    --big: 4.8rem;
+    --md: 3.4rem;
+    --std: 1.4rem;
+    --gray: #666666;
+    --lightgrey: #f7f9fa;
+    --dark: #203B6A;
+    --black: #333;
+    --white: white;
+    --bg-dark: #4685cd;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    /* 1rem = 10px */
+}
+
+body {
+    background-image: url(../img/fondo_cocina_L5.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    text-decoration: none;
+    margin: 90px auto 0;
+    /* Ajusta el margen superior para evitar superposición con el header */
+}
+
+header {
+    height: 12rem;
+    width: 100%;
+    padding: .5rem 3%;
+    background: rgba(217, 219, 107, 0.356);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 200;
+    position: fixed;
+    /* Fija el header en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+header img {
+    margin: 0.5rem;
+    height: 10rem;
+    margin-right: 1rem;
+}
+
+.header__id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    font-size: var(--big);
+    color: rgba(255, 30, 0, 0.925);
+}
+
+.header__logo__mobile {
+    display: none;
+}
+
+.navbar {
+    font-size: 1.7rem;
+    color: black;
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+}
+
+.navbar a {
+    margin-right: 5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar a:last-child {
+    margin-right: 0;
+}
+
+.navbar a:hover {
+    color: var(--white)
+}
+
+main {
+    width: 100%;
+    height: calc(100vh - 12rem);
+    padding: 12rem 2% 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+aside {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(247, 76, 76, 0.733);
+    padding: 2rem;
+    margin-top: 2rem;
+    z-index: 100;
+}
+
+.container {
+    flex-grow: 1;
+    color: white;
+}
+
+.container label {
+    font-size: 1.8rem;
+}
+
+.container button {
+    font-size: medium;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+.slider__aside {
+    display: flex;
+    width: 30rem;
+    height: 22rem;
+    margin-top: 2rem;
+}
+
+.slider__aside img {
+    width: 0;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity: .8;
+    transition: .5s ease;
+}
+
+.slider__aside img:hover {
+    cursor: crosshair;
+    width: 15rem;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+.aside__publicity {
+    display: flex;
+    width: 30rem;
+    height: 22rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+
+.aside__publicity img {
+    height: 20rem;
+}
+
+.recetas__container {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(247, 76, 76, 0.733);
+    padding: 2rem;
+    margin-top: 2rem;
+    z-index: 100;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #e3fc05;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+
+}
+
+.card-content {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+p {
+    color: #555;
+}
+
+
+footer {
+    width: 100%;
+    height: 15rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+footer .icons {
+
+    width: 15rem;
+    height: 5rem;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer .icons span {
+    color: rgb(238, 54, 54);
+}
+
+footer a {
+    text-decoration: none;
+}
+
+.copyright {
+    font-size: 1rem;
+
+    text-align: center;
+    color: #666;
+    margin-top: .5rem 0;
+    bottom: 0;
+}

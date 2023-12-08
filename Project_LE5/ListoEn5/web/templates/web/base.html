@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="sano,rico,rapidas,recetas,practicas" />
+    <meta 
+      name="description"
+      content="Es un asistente de cocina virtual que te ayuda a preparar las mas ricas recetas en cinco minutos"
+    />
+    <meta name="autor" content=" Carlos M. Galvis / Colaboradores: Patricia Avendaño - Maria Roble "/>
+    <link rel="stylesheet" href="{% static 'web/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'web/css/font/flaticon.css' %}" />
+    <link rel="icon" href="{% static 'web/img/favicon.ico' %}" type="image/x-icon" />
+    <link
+        rel="shortcut icon"
+        href="{% static 'web/img/favicon.ico' %}"
+        type="image/x-icon"
+    />
+    <!-- CDN Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <title>{% block title %}{% endblock %}</title>
+    {% block arc_css %}{% endblock %}
+</head>
+<body>
+    <header>
+        <section class="header__id">
+            <a class="header__logo__desktop" href="#">
+              <img src="{% static 'web/img/logo_desktop.png' %}" alt="logo_desktop" />
+            </a>
+            <a class="header__logo__mobile" href="#">
+              <img src="{% static 'web/img/Logo_mobile.png' %}" alt="logo_desktop" />
+            </a>
+            <h1>Listo En 5</h1>
+          </section>
+        <nav class="navbar">
+            <a href="#">INICIO</a>
+            <a href="#">RECETAS</a>
+            <a href="#">NOSOTROS</a>
+            <a href="#">CONTACTO</a>
+        </nav>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous">
+        </script>
+    </main>
+    <footer>
+        <div class="icons">
+            <a href="https://www.instagram.com/listoen5/" target="_blank"
+              ><span class="flaticon-011-instagram"></span
+            ></a>
+            <a href="https://twitter.com/listoen5" target="_blank"
+              ><span class="flaticon-013-twitter-1"></span
+            ></a>
+            <a href="https://www.youtube.com/@Listoen5" target="_blank"
+              ><span class="flaticon-008-youtube"></span
+            ></a>
+          </div>
+        <p class="copyright">
+            © Copyright 2023 CG / Todos los derechos reservados. Prohibida la
+            duplicación, distribución o almacenamiento en cualquier medio.
+        </p>
+    </footer>
+</body>
+</html>
