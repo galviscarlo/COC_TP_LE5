@@ -80,7 +80,7 @@ header h1 {
 }
 
 .navbar {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     color: black;
     font-weight: 500;
     margin-left: 3.5rem;
@@ -114,29 +114,35 @@ aside {
     width: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgba(247, 76, 76, 0.733);
+    background-color: rgba(221, 50, 50, 0.664);
     padding: 2rem;
     margin-top: 2rem;
+    justify-content: center;
     z-index: 100;
 }
 
 .container {
     flex-grow: 1;
     color: white;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
 }
 
-.container label {
-    font-size: 1.8rem;
+.container2 {
+    width: 35rem; /* Tamaño deseado del contenedor */
+    height: 50rem; /* Establece la altura del contenedor para que coincida con el ancho y forme un cuadrado */
+    overflow: hidden; /* Asegura que cualquier contenido que exceda el contenedor se recorte */
+    text-align: center;
 }
+  
+  .container2 img {
+    width: 100%; /* La imagen ocupará el 100% del ancho del contenedor */
+    height: 100%; /* La imagen ocupará el 100% de la altura del contenedor */
+    object-fit: contain; /* Ajusta la imagen para que se ajuste proporcionalmente dentro del contenedor sin cortar ni distorsionar */
 
-.container button {
-    font-size: medium;
-}
-
-form {
-    margin-top: 2rem;
-}
-
+  }
+  
 .slider__aside {
     display: flex;
     width: 30rem;
@@ -157,73 +163,6 @@ form {
     width: 15rem;
     opacity: 1;
     filter: contrast(120%);
-}
-
-.aside__publicity {
-    display: flex;
-    width: 30rem;
-    height: 22rem;
-    margin-top: 2rem;
-    align-items: center;
-}
-
-.aside__publicity img {
-    height: 20rem;
-}
-
-.recetas__container {
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(247, 76, 76, 0.733);
-    padding: 2rem;
-    margin-top: 2rem;
-    z-index: 100;
-}
-
-.card {
-    margin-bottom: 20px;
-    background-color: #e3fc05;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.card:hover {
-    transform: scale(1.05);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-bottom: 1px solid #ddd;
-
-}
-
-.card-content {
-    padding: 20px;
-}
-
-h2 {
-    margin-bottom: 10px;
-    color: #333;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-p {
-    color: #555;
 }
 
 

@@ -5,11 +5,11 @@ from django.http import HttpResponse
 def index(request):
     return render(request, 'web/index.html', context={})
 
+def subir(request):
+    return HttpResponse("Hola")
+
+def editar(request):
+    return HttpResponse("Hola")
+
 def recetas(request):
-    return HttpResponse("Hola")
-
-def nosotros(request):
-    return HttpResponse("Hola")
-
-def contacto(request):
     return HttpResponse("Hola")
