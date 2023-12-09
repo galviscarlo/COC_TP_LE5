@@ -80,7 +80,7 @@ header h1 {
 }
 
 .navbar {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: black;
     font-weight: 500;
     margin-left: 3.5rem;
@@ -114,20 +114,27 @@ aside {
     width: auto;
     display: flex;
     flex-direction: column;
-    background-color: rgba(221, 50, 50, 0.664);
+    background-color: rgba(231, 96, 78, 0.5);
     padding: 2rem;
     margin-top: 2rem;
     justify-content: center;
     z-index: 100;
 }
 
+aside h2 {
+    font: 3rem sans-serif;
+    font-size: 3rem;
+    background-color: #5f5353bd;
+    letter-spacing:0.2rem;
+}
 .container {
     flex-grow: 1;
-    color: white;
+    color: rgb(255, 255, 255);
     align-items: center;
     justify-items: center;
     text-align: center;
 }
+
 
 .container2 {
     width: 35rem; /* Tamaño deseado del contenedor */
@@ -142,11 +149,19 @@ aside {
     object-fit: contain; /* Ajusta la imagen para que se ajuste proporcionalmente dentro del contenedor sin cortar ni distorsionar */
 
   }
+
+  .container2 h2 {
+    color: white;
+    font: 3rem sans-serif;
+    font-size: 3rem;
+    background-color: #5f5353bd;
+    letter-spacing:0.2rem;
+  }
   
 .slider__aside {
     display: flex;
-    width: 30rem;
-    height: 22rem;
+    width: 40rem;
+    height: 30rem;
     margin-top: 2rem;
 }
 
