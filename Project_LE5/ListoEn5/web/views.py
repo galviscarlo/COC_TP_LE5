@@ -1,15 +1,39 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.urls import reverse, reverse_lazy
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.detail import DetailView
+from .models import Receta
 
-# Create your views here.
-def index(request):
-    return render(request, 'web/index.html', context={})
+# Vistas basadas en clase 
 
-def subir(request):
-    return HttpResponse("Hola")
+class RecetaListView(ListView):
+    model = Receta
+    context_object_name = 'listado_recetas'
+    template_name = 'web/recetas.html'
 
-def editar(request):
-    return HttpResponse("Hola")
+class RecetaCreateView(CreateView):
+    model = Receta
+    template_name = 'web/subir.html'
+    success_url = reverse_lazy('recetas')
+    fields = '__all__' #['nombre', 'ingredientes']
 
-def recetas(request):
-    return HttpResponse("Hola")
+class RecetaDetailView(DetailView):
+    model = Receta
+    template_name = 'web/receta_detalle.html'
+
+class RecetaUpdateView(UpdateView):
+    template_name= 'web/editar.html'
+    model = Receta
+    fields = '__all__'
+
+    def get_success_url(self):
+        return reverse('receta_detalle', kwargs={'pk': self.object.pk})
+    
+class RecetaDeleteView(DeleteView):
+    model = Receta
+    template_name = 'web/eliminar.html'
+    success_url = reverse_lazy('recetas')
+
+   

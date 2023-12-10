@@ -1,0 +1,17 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}Eliminar Receta {% endblock %}
+{% block arc_css %}{% endblock %}
+
+{% block main %}
+    <form method="post"> 
+        <h2>ELIMINAR RECETA</h2>      
+        <div class="mb-3">
+            {% csrf_token%}
+            <P>Estas seguro de eliminar esta receta: "{{ object }}"?</P>
+            {{ form }}
+        </div>        
+        <button type="submit" class="btn btn-warning" value="Confirm">Aceptar</button>
+  </form>
+{% endblock %}

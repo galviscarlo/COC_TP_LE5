@@ -1,0 +1,23 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}Ver Receta {% endblock %}
+{% block arc_css %}{% endblock %}
+
+{% block main %}
+
+<div class="card text-bg-danger mb-6" style="max-width: 340px;">
+    <div class="card-header">
+        {{object.nombre}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Ingredientes:</h5>
+      <p class="card-text">{{object.ingredientes}}</p>
+      <h5 class="card-title">Preparación: </h5>
+      <p class="card-text">{{object.preparacion}}</p>
+      <h5 class="card-title">Origen: </h5>
+      <p class="card-text">{{object.origen}}</p>
+      <a href="{% url 'recetas' %}" class="btn btn-primary">Regresar</a>
+    </div>
+  </div>
+{% endblock %}

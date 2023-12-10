@@ -1,0 +1,16 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}Subir Nueva Receta {% endblock %}
+{% block arc_css %}{% endblock %}
+
+{% block main %}
+    <form method="post" action="{% url 'subir' %}"> 
+        <h2>AGREGAR NUEVA RECETA</h2>      
+        <div class="mb-3">
+            {% csrf_token%}
+            {{ form.as_p }}
+        </div>        
+        <button type="submit" class="btn btn-warning">Enviar</button>
+  </form>
+{% endblock %}

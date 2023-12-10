@@ -1,0 +1,26 @@
+{% extends "web/base.html" %}
+{% load static %}
+
+{% block title %}Recetas{% endblock %}
+{% block arc_css %}{% endblock %}
+
+{% block main %}
+
+<div class="row">
+{%for receta in listado_recetas %}
+  <div class="col-2">
+    <div class="card border-warning mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{receta.nombre}}</h5>
+            <p class="card-text"><b>Ingredientes: </b>{{receta.ingredientes}}</p>
+            <p class="card-text"><b>Preparación: </b>{{receta.preparacion}}</p>
+            <a href="{% url 'editar' receta.id %}" class="card-link">Editar</a>
+            <a href="{% url 'eliminar' receta.id %}" class="card-link">Eliminar</a>
+        </div>
+      </div>
+    </div>    
+  {% empty %}   
+    <p>No hay recetas que mostrar</p>    
+  {% endfor %}
+</div>
+{% endblock %}

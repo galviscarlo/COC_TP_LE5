@@ -40,8 +40,9 @@
             <h1>Listo En 5</h1>
           </section>
         <nav class="navbar">
-            <a href="#">INICIO</a>
-            <a href="#">RECETAS</a>
+            <a href="{% url 'index' %}">INICIO</a>
+            <a href="{% url 'recetas' %}">RECETAS</a>
+            <a href="{% url 'subir' %}">AGREGAR</a>
         </nav>
     </header>
     <main>
