@@ -7,6 +7,8 @@ from django.views.generic.detail import DetailView
 from .models import Receta
 
 # Vistas basadas en clase 
+def index(request):
+    return render(request, 'web/index.html', {})
 
 class RecetaListView(ListView):
     model = Receta
